@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Mi página de GitHub</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <header>
+      <h1>Github Page de Eduardo Santoyo Castro</h1>
+    </header>
+
+    <div class="container">
+        
+      <h2>Mis intereses en ciencia de datos</h2>
+      <br>
+      <br>
+      <p id="intereses">Como científico de datos que aún estoy estudiando la carrera, tengo una amplia gama de intereses en cuanto a la implementación del análisis de datos se refiere. Personalmente, me atraen tres campos específicos: la biología, la neurociencia y la bolsa de valores.
+        <br>
+        <br>
+        En el campo de la biología, me encanta la idea de analizar grandes conjuntos de datos genómicos para identificar patrones que 
+        puedan arrojar luz sobre cómo funciona el cuerpo humano. Creo que la capacidad de aplicar técnicas de análisis de datos para 
+        entender mejor la biología y la salud humana tiene un gran potencial para hacer una diferencia significativa en el mundo.
+        <br>
+        <br>
+        En cuanto a la neurociencia, me interesa cómo el análisis de datos puede ayudar a comprender mejor el cerebro humano y sus 
+        complejas funciones. Desde la identificación de patrones en grandes conjuntos de datos de imágenes cerebrales, hasta la 
+        comprensión de los procesos cognitivos, creo que el análisis de datos puede ayudar a avanzar en la comprensión de la mente humana.
+        <br>
+        <br>
+        Por último, en el campo de la bolsa de valores, me interesa el análisis de datos financiero para identificar patrones en el 
+        mercado y desarrollar estrategias comerciales más efectivas. Creo que el análisis de datos puede proporcionar una visión única 
+        del comportamiento del mercado y ayudar a los inversores a tomar decisiones informadas y efectivas.
+        <br>
+        <br>
+        <br>
+        </p>
+        <h2>Mis logros hasta el momento</h2>
+        <br>
+        <br>
+        <p id="logros">
+        Uno de mis logros más importantes fue unirme al equipo de robótica de HypeBirds en el Tec de Monterrey cuando estaba en la 
+        preparatoria, ya que aprendí a trabajar en equipo y descubrí mi pasión por la programación. En un inicio mis compañeros de clase, 
+        Leonardo y Sebastián, tuvieron la idea de crear un equipo de robótica debido a que los equipos ya establecidos no estaban aceptando 
+        gente en ese momento, por lo qué la única opción que les quedaba era crear su propio equipo y reclutar gente. Eventualmente me 
+        propusieron ser parte del equipo pero yo no tenía mucho interés, pensaba que sólo me quitaría tiempo y que sería difícil sino 
+        imposible ganar algo contra equipos que ya tenían años compitiendo. Sin embargo, me convencieron y el equipo, que ahora contaba 
+        con 15 integrantes, se puso manos a la obra para ser parte de la competencia FIRST CHALLENGE. 
+
+        <br>
+        <br>
+        <style>
+            /* CSS para centrar la imagen */
+            img {
+              display: block;
+              margin: 0 auto;
+            }
+          </style>
+        <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/FIRST_Tech_challenge_logo.png" alt="Imagen de FIRST_Tech_challenge_logo">
+
+        <br>
+        <br>
+        Empezamos con muchos problemas, dado que teníamos que juntar patrocinadores para obtener dinero y así comprar las piezas para el 
+        robot que tenía que estar construido en dos meses para competir, y como equipo que apenas estaba empezando todos nos veían como 
+        una causa perdida en la que no deberían invertir dinero. No obstante, Leonardo pudo conseguir que la empresa Deloitte nos patrocinara y así pudimos comprar las piezas del robot, pero los 
+        problemas no acabaron ahí. Como pedimos las piezas tarde y hubo muchos problemas con aduana, las piezas terminaron llegando 2 
+        semanas antes de la competencia, lo que nos dejó en una posición sumamente difícil. Tendríamos que armar un robot en una décima 
+        parte del tiempo que tuvieron los otros equipos y nosotros no contabamos con ninguna experiencia en esto. 
+        <br>
+        <br>
+        Todo parecía perdido, pero gracias a 
+        nuestro profesor de informática, los coaches de otros equipos y nuestra dedicación por el proyecto pudimos construir el robot en 
+        esas dos semanas y competir para quedar como alianza ganadora de la región centro. Nadie lo podía creer y realmente fue una 
+        emoción que nunca había experimentado en la vida, me sentí orgulloso de haber participado en este proyecto y saber que ganamos 
+        el premio al mejor código de la competencia, siendo yo el encargado de esta sección del equipo. Esta emoción nos entusiasmó mucho 
+        y eso se reflejó en la competencia a nivel nacional, donde dominamos la competencia en la etapa individual y donde quedamos en 
+        segundo lugar ya con las alianzas. Sin duda una experiencia que me marcó y que me inspiró a estudiar ciencia de datos y apasionarme por la programación. 
+        
+         </p>
+
+      <div class="blog">
+        <h2>La ciencia de datos para comprender el cerebro humano</h2>
+        <br>
+        <br>
+        <p id="blog">La ciencia de datos ha demostrado ser una herramienta fundamental en el análisis y comprensión del cerebro humano. 
+            Con el aumento de la cantidad y la complejidad de los datos neurocientíficos, se hace cada vez más necesario el uso de 
+            técnicas y herramientas de análisis de datos para extraer conocimientos significativos.
+            En Python, podemos utilizar bibliotecas especializadas como NumPy, Pandas y Matplotlib para realizar análisis de datos y 
+            visualización de manera eficiente y efectiva. Por ejemplo, podemos utilizar estas herramientas para analizar y visualizar datos de la actividad cerebral obtenidos mediante técnicas como la resonancia magnética funcional (fMRI) o la electroencefalografía (EEG).
+            
+            Veamos un ejemplo de cómo podemos utilizar Python para analizar datos de fMRI. Primero, importamos las bibliotecas necesarias:</p>
+
+        <h3> Código para analizar fmri</h3>
+        <pre><code>// 
+            import numpy as np
+            import pandas as pd
+            import matplotlib.pyplot as plt
+            import nibabel as nib
+
+            fmri = nib.load('fmri.nii.gz').get_fdata()
+            fmri = np.transpose(fmri, [3,0,1,2]) # Reordenamos las dimensiones
+            fmri = fmri[..., 4:] # Eliminamos los primeros 4 volúmenes
+
+            # Cargamos los datos de diseño
+            design = pd.read_csv('design.csv')
+            # Realizamos la regresión
+            beta = np.linalg.inv(design.T @ design) @ design.T @ fmri.reshape(fmri.shape[0], -1).T
+            beta = beta.T.reshape(*fmri.shape[1:], design.shape[1])
+
+            # Visualizamos un corte axial del mapa de betas
+            plt.imshow(beta[32,:,:], cmap='coolwarm', vmin=-3, vmax=3)
+            plt.colorbar()
+            plt.show()
+
+
+                    
+        </code></pre>
+
+        <h3>Ejemplo de como se ve fmri</h3>
+        <img src="https://miro.medium.com/v2/resize:fit:1400/0*Wm5SxicojqfrKw8a" alt="Imagen de fmri">
+
+        <p>Este es un ejemplo de cómo la ciencia de datos puede ser utilizada en el análisis y comprensión del cerebro humano. 
+            Con el uso de herramientas y técnicas adecuadas, podemos extraer conocimientos significativos de los datos neurocientíficos 
+            y avanzar en nuestra comprensión del cerebro y sus procesos.
+            <br>
+            <br>
+            Sin embargo, a pesar de los avances que se han logrado gracias a la ciencia de datos en la neurociencia, todavía existen 
+            limitaciones. Una de las principales limitaciones es la falta de estandarización en los métodos de adquisición y procesamiento
+            de datos neurocientíficos. Esto hace que sea difícil comparar datos entre diferentes estudios y laboratorios, lo que puede 
+            limitar nuestra comprensión global del cerebro humano. 
+            <br>
+            <br>
+            Otra limitación es la complejidad de los datos neurocientíficos en sí
+            mismos. A menudo, los datos son muy ruidosos y pueden estar altamente correlacionados, lo que dificulta la identificación de 
+            patrones significativos. Además, los datos neurocientíficos a menudo tienen una alta dimensionalidad, lo que requiere el uso 
+            de técnicas de reducción de dimensionalidad para hacerlos más manejables.
+            <br>
+            <br>
+            A pesar de estas limitaciones, la ciencia de datos sigue siendo una herramienta fundamental en la investigación 
+            neurocientífica, y se espera que su uso continuo nos permita seguir avanzando en nuestra comprensión del cerebro 
+            humano.
+            <br>
+            <br>
+            En conclusión, como estudiante de universidad de la carrera de ciencia de datos y apasionado por el futuro del análisis de datos, 
+            es emocionante ver cómo la ciencia de datos ha sido fundamental en los avances y descubrimientos en la neurociencia. Gracias 
+            a las técnicas y herramientas de análisis de datos, ahora podemos comprender mejor la complejidad del cerebro humano y cómo 
+            funciona. Sin embargo, también es importante tener en cuenta que hay limitaciones en el uso de la ciencia de datos en la 
+            neurociencia y que aún queda mucho por explorar y descubrir en esta fascinante área de investigación.
+        </p>
+
+      </div>
+    </div>
+
+    <footer>
+      <p>Mi página de GitHub &copy; <span id="year"></span></p>
+    </footer>
+
+    <script>
+      // Obtener la fecha actual
+      const today = new Date();
+      const year = today.getFullYear();
+
+      // Actualizar el año en el footer
+      const yearElement = document.getElementById('year');
+      yearElement.textContent = year;
+    </script>
+  </body>
+</html>
